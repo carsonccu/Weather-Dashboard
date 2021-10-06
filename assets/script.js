@@ -34,5 +34,21 @@ function currentDay(e) {
             document.querySelector("#today-humidity").innerHTML = data.main.humidity + "%";
 
             currentDay(e)
+            uvi(e)
+
+            function uvi(e) {
+                e.preventDefault();
+                var lat = data.coord.lat;
+                var lon = data.coord.lon;
+                uviURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + APIKey;
+
+                fetch(uviURL)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        document.querySelector("#today-uvi").innerHTML = data[0].value;
+                    })
+            }
         })
 }
