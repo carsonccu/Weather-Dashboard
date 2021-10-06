@@ -4,3 +4,7 @@
     justify-content: center;
     color: white;
 }
+
+.city-card{
+   display: inline;
+}
