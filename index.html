@@ -14,28 +14,24 @@
     <div class="jumbotron">
         <h1 class="display-4">Weather Dashboard</h1>
     </div>
-    <div class="search">
-        <h2>Search for a City:</h2>
-        <input class="city" type="text">
-    </div>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Search</button>
-    <div class="col-lg-8">
-        <div class="card" id="display-today"></div>
-    </div>
-    <div id="weathercard">
-        <h3 id="5-day-weather"></h3>
-        <div class="container">
-            <div class="row">
-                <div id="forecast">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-4 bg-light">
+                <p class="search-header my-1">Search for a city</p>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name"
+                        aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary btn-lg">Search</button>
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/script.js"></script>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                <script src="assets/script.js"></script>
 </body>
 
 </html>
