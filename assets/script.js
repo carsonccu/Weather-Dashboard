@@ -1,6 +1,6 @@
 var APIKey = "&appid=348695b7be825684de6066f96d8b32f6";
 var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=";
-var fiveday = "https://api.openweathermap.org/data/2.5/forecast?q=";
+var fivedayforecast = "https://api.openweathermap.org/data/2.5/forecast?q=";
 var unitMeasurement = "&units=imperial";
 
 var history = JSON.parse(window.localStorage.getItem("city-input")) || [];
@@ -51,4 +51,45 @@ function currentDay(e) {
                     })
             }
         })
+}
+
+function fiveday(e) {
+    e.preventDefault();
+    fivedayurl = fivedayforecast + userCity + APIKey + unitMeasurement;
+    fetch(fivedayurl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            // day 1
+            document.querySelector("#icon1").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png"></img>');
+            document.querySelector("#temp1").innerhtml = data.list[0].main.temp + " F"
+            document.querySelector("#wind1").innerHTML = data.list[0].wind.speed + " MPH";
+            document.querySelector("#humidity1").innerhtml = data.list[0].main.humidity + "%";
+            // Day 2
+            document.querySelector("#icon2").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[1].weather[1].icon + '.png"></img>');
+            document.querySelector("#temp2").innerhtml = data.list[1].main.temp + " F"
+            document.querySelector("#wind2").innerHTML = data.list[1].wind.speed + " MPH";
+            document.querySelector("#humidity2").innerhtml = data.list[1].main.humidity + "%";
+            // Day 3
+            document.querySelector("#icon3").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[2].weather[2].icon + '.png"></img>');
+            document.querySelector("#temp3").innerhtml = data.list[2].main.temp + " F"
+            document.querySelector("#wind3").innerHTML = data.list[2].wind.speed + " MPH";
+            document.querySelector("#humidity3").innerhtml = data.list[2].main.humidity + "%";
+            // Day 4
+            document.querySelector("#icon4").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[3].weather[3].icon + '.png"></img>');
+            document.querySelector("#temp4").innerhtml = data.list[3].main.temp + " F"
+            document.querySelector("#wind4").innerHTML = data.list[3].wind.speed + " MPH";
+            document.querySelector("#humidity4").innerhtml = data.list[3].main.humidity + "%";
+            // Day 5
+            document.querySelector("#icon5").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[4].weather[4].icon + '.png"></img>');
+            document.querySelector("#temp5").innerhtml = data.list[4].main.temp + " F"
+            document.querySelector("#wind5").innerHTML = data.list[4].wind.speed + " MPH";
+            document.querySelector("#humidity5").innerhtml = data.list[4].main.humidity + "%";
+        })
+};
+
+function save() {
+    history.pushState(userCity);
+    localStorage.setItem("history", JSON.stringify(history));
 }
