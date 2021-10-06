@@ -20,6 +20,23 @@ function currentweather(e) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // fetch("https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=imperial&mode=xml", {
 //     "method": "GET",
 //     "headers": {
