@@ -10,6 +10,7 @@ searchButton = document.querySelector("#searchbtn");
 currentWeather = document.querySelector("#currentWeather");
 fiveDay = document.querySelector("#fiveDayForecast");
 cityText = document.querySelector("#city-input");
+var currentDate = moment().format('l');
 
 searchButton.addEventListener('click', search);
 
@@ -22,4 +23,16 @@ function currentDay(e) {
     e.preventDefault();
     finalUrl = apiURL + userCity + APIKey + unitMeasurement;
     console.log(finalUrl)
+    fetch(finalUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            document.querySelector("#city-name").innerHTML = userCity + "(" + currentDate + ")" + '<img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png"></img>';
+            document.querySelector("#today-temp").innerHTML = data.main.temp + " F";
+            document.querySelector("#today-wind").innerHTML = data.wind.speed + " MPH";
+            document.querySelector("#today-humidity").innerHTML = data.main.humidity + "%";
+
+            currentDay(e)
+        })
 }
