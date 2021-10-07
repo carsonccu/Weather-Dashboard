@@ -62,26 +62,31 @@ function fiveday(e) {
         })
         .then(function (data) {
             // day 1
+            document.querySelector("#date1").innerHTML = moment().add(1, "days").format("l");
             document.querySelector("#icon1").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png"></img>');
             document.querySelector("#temp1").innerHTML = data.list[0].main.temp + " F"
             document.querySelector("#wind1").innerHTML = data.list[0].wind.speed + " MPH";
             document.querySelector("#humidity1").innerHTML = data.list[0].main.humidity + "%";
             // Day 2
+            document.querySelector("#date2").innerHTML = moment().add(2, "days").format("l");
             document.querySelector("#icon2").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[1].weather[0].icon + '.png"></img>');
             document.querySelector("#temp2").innerHTML = data.list[1].main.temp + " F"
             document.querySelector("#wind2").innerHTML = data.list[1].wind.speed + " MPH";
             document.querySelector("#humidity2").innerHTML = data.list[1].main.humidity + "%";
             // Day 3
+            document.querySelector("#date3").innerHTML = moment().add(3, "days").format("l");
             document.querySelector("#icon3").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[2].weather[0].icon + '.png"></img>');
             document.querySelector("#temp3").innerHTML = data.list[2].main.temp + " F"
             document.querySelector("#wind3").innerHTML = data.list[2].wind.speed + " MPH";
             document.querySelector("#humidity3").innerHTML = data.list[2].main.humidity + "%";
             // Day 4
+            document.querySelector("#date4").innerHTML = moment().add(4, "days").format("l");
             document.querySelector("#icon4").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[3].weather[0].icon + '.png"></img>');
             document.querySelector("#temp4").innerHTML = data.list[3].main.temp + " F"
             document.querySelector("#wind4").innerHTML = data.list[3].wind.speed + " MPH";
             document.querySelector("#humidity4").innerHTML = data.list[3].main.humidity + "%";
             // Day 5
+            document.querySelector("#date5").innerHTML = moment().add(5, "days").format("l");
             document.querySelector("#icon5").innerHTML = ('<img src="http://openweathermap.org/img/w/' + data.list[4].weather[0].icon + '.png"></img>');
             document.querySelector("#temp5").innerHTML = data.list[4].main.temp + " F"
             document.querySelector("#wind5").innerHTML = data.list[4].wind.speed + " MPH";
