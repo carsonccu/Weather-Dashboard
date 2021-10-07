@@ -5,11 +5,11 @@ var unitMeasurement = "&units=imperial";
 
 var history = JSON.parse(window.localStorage.getItem("city-input")) || [];
 
-searchContainer = document.querySelector("#container");
-searchButton = document.querySelector("#searchbtn");
-currentWeather = document.querySelector("#currentWeather");
-fiveDay = document.querySelector("#fiveDayForecast");
-cityText = document.querySelector("#city-input");
+var searchContainer = document.querySelector("#container");
+var searchButton = document.querySelector("#searchbtn");
+var currentWeather = document.querySelector("#currentWeather");
+var fiveDay = document.querySelector("#fiveDayForecast");
+var cityText = document.querySelector("#city-input");
 var currentDate = moment().format('l');
 
 searchButton.addEventListener('click', search);
@@ -49,6 +49,7 @@ function currentDay(e) {
                     .then(function (data) {
                         document.querySelector("#today-uvi").innerHTML = data[0].value;
                     })
+
             }
         })
 }
