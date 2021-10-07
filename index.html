@@ -28,70 +28,75 @@
                     </div>
                     <form id="history"></form>
                 </div>
-                <div class="col-md-9 row justify-content-center">
-                    <section id="currentWeather" class="col-md-12"></section>
-                    <div id="city-card">
-                        <h2 id="city-name"></h2>
-                        <p>Temp: <span id="today-temp"></span></p>
-                        <p>Wind: <span id="today-wind"></span></p>
-                        <p>Humidity: <span id="today-humidity"></span></p>
-                        <p>UVI Index: <span id="today-uvi"></span></p>
-                    </div>
-                    <section id="fiveDayForecast" class="col-md-12 row rounded ms-1 mt-1">
-                        <h1 class="col-md-12">5-Day Forecast: </h1>
-                        <div class="card forecast-mini-card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title" id="date1">Date Here</h5>
-                                <p id="icon1"></p>
-                                <p>Temp: <span id="temp1"></span></p>
-                                <p>Wind: <span id="wind1"></span></p>
-                                <p>Humidity: <span id="humidity1"></span></p>
-                            </div>
-                        </div>
-                        <div class="card forecast-mini-card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title" id="date2">Date Here</h5>
-                                <p id="icon2"></p>
-                                <p>Temp: <span id="temp2"></span></p>
-                                <p>Wind: <span id="wind2"></span></p>
-                                <p>Humidity: <span id="humidity2"></span></p>
-                            </div>
-                        </div>
-                        <div class="card forecast-mini-card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title" id="date3">Date Here</h5>
-                                <p id="icon3"></p>
-                                <p>Temp: <span id="temp3"></span></p>
-                                <p>Wind: <span id="wind3"></span></p>
-                                <p>Humidity: <span id="humidity3"></span></p>
-                            </div>
-                        </div>
-                        <div class="card forecast-mini-card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title" id="date4">Date Here</h5>
-                                <p id="icon4"></p>
-                                <p>Temp: <span id="temp4"></span></p>
-                                <p>Wind: <span id="wind4"></span></p>
-                                <p>Humidity: <span id="humidity4"></span></p>
-                            </div>
-                        </div>
-                        <div class="card forecast-mini-card" style="width: 10rem;">
-                            <div class="card-body">
-                                <h5 class="card-title" id="date5">Date Here</h5>
-                                <p id="icon5"></p>
-                                <p>Temp: <span id="temp5"></span></p>
-                                <p>Wind: <span id="wind5"></span></p>
-                                <p>Humidity: <span id="humidity5"></span></p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
             </div>
+        </div>
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-            <script src="assets/script.js"></script>
+        <div class="container">
+            <section id="currentWeather" class="col-md-12"></section>
+            <div id="city-card">
+                <h2 id="city-name"></h2>
+                <p>Temp: <span id="today-temp"></span></p>
+                <p>Wind: <span id="today-wind"></span></p>
+                <p>Humidity: <span id="today-humidity"></span></p>
+                <p>UVI Index: <span id="today-uvi"></span></p>
+            </div>
+        </div>
+    </div>
+    <section id="fiveDayForecast" class="col-md-12 row rounded ms-1 mt-1">
+        <h1 class="col-md-12">5-Day Forecast: </h1>
+        <div class="card forecast-mini-card" style="width: 10rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="date1">Date</h5>
+                <p id="icon1"></p>
+                <p>Temp: <span id="temp1"></span></p>
+                <p>Wind: <span id="wind1"></span></p>
+                <p>Humidity: <span id="humidity1"></span></p>
+            </div>
+        </div>
+        <div class="card forecast-mini-card" style="width: 10rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="date2">Date H</h5>
+                <p id="icon2"></p>
+                <p>Temp: <span id="temp2"></span></p>
+                <p>Wind: <span id="wind2"></span></p>
+                <p>Humidity: <span id="humidity2"></span></p>
+            </div>
+        </div>
+        <div class="card forecast-mini-card" style="width: 10rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="date3">Date Here</h5>
+                <p id="icon3"></p>
+                <p>Temp: <span id="temp3"></span></p>
+                <p>Wind: <span id="wind3"></span></p>
+                <p>Humidity: <span id="humidity3"></span></p>
+            </div>
+        </div>
+        <div class="card forecast-mini-card" style="width: 10rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="date4">Date Here</h5>
+                <p id="icon4"></p>
+                <p>Temp: <span id="temp4"></span></p>
+                <p>Wind: <span id="wind4"></span></p>
+                <p>Humidity: <span id="humidity4"></span></p>
+            </div>
+        </div>
+        <div class="card forecast-mini-card" style="width: 10rem;">
+            <div class="card-body">
+                <h5 class="card-title" id="date5">Date Here</h5>
+                <p id="icon5"></p>
+                <p>Temp: <span id="temp5"></span></p>
+                <p>Wind: <span id="wind5"></span></p>
+                <p>Humidity: <span id="humidity5"></span></p>
+            </div>
+        </div>
+    </section>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 
 </html>

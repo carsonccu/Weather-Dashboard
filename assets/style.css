@@ -5,6 +5,6 @@
     color: white;
 }
 
-.city-card{
-   display: inline;
+.card-body {
+    display: inline-block;
 }

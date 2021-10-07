@@ -13,3 +13,14 @@ Bootstrap is uded to create the display that a user will see when directed to my
 
 ## Credits 
 
+* https://momentjs.com/docs
+* https://www.w3schools.com
+* https://getbootstrap.com
+* https://openweathermap.org/api
+
+# Links
+
+[Link to Live Page] https://carsonccu.github.io/Weather-Dashboard/
+
+
+[link to repositoy] https://github.com/carsonccu/Weather-Dashboard
